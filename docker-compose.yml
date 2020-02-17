@@ -4,7 +4,7 @@ volumes:
     driver: local
 services:
   app:
-    image: jekyll/jekyll
+    image: jekyll/jekyll:pages
     command: jekyll serve --force_polling
     volumes:
       - $PWD:/srv/jekyll
