@@ -1,0 +1,13 @@
+version: '3.7'
+volumes:
+  app-gems:
+    driver: local
+services:
+  app:
+    image: jekyll/jekyll
+    command: jekyll serve --force_polling
+    volumes:
+      - $PWD:/srv/jekyll
+      - app-gems:/usr/local/bundle
+    ports:
+      - 4000:4000
